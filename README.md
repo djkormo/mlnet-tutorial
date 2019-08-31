@@ -22,4 +22,12 @@ In addition to this, please make sure you have either
 [Visual Studio 2019](https://visualstudio.microsoft.com/)
 or [VSCode](https://code.visualstudio.com) installed.
 
-[Get Started](getting-started/README.md)
+## Getting started
+Please clone this repository to disk for the best experience during the tutorial.
+
+```
+git clone https://github.com/wmeints/mlnet-tutorial.git
+```
+
+After cloning the repository, start with the 
+[Getting started](getting-started/README.md) section.
