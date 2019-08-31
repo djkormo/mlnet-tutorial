@@ -7,11 +7,11 @@ use ML.NET in your .NET core applications.
 
 The following topics are covered in this tutorial: 
 
-1. [Getting started](getting-started/README.md)
-2. [Loading data](loading-data/README.md)
-3. [Training models](training-models/README.md)
-4. [Testing models](testing-models/README.md)
-5. [Using models](using-models/README.md)
+1. [Getting started](docs/getting-started/README.md)
+2. [Loading data](docs/loading-data/README.md)
+3. [Training models](docs/training-models/README.md)
+4. [Testing models](docs/testing-models/README.md)
+5. [Using models](docs/using-models/README.md)
 
 ## Prerequisites
 
