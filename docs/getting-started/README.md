@@ -19,7 +19,7 @@ Let's start by creating an empty web project for the project.
 
 ## Creating a new project
 
-<iframe title="YouTube video player" class="youtube-player" type="text/html" width="640" height="385" src="https://www.youtube.com/embed/pYlajl5F6cM?vq=hd1080" frameborder="0" allowFullScreen></iframe>
+![Step 1 - Creating a new project](../../artwork/animations/step-1.gif)
 
 Start a new web project by executing the following commands
 
@@ -41,7 +41,7 @@ Now that you have an empty web project, let's add the ML.NET package to it.
 
 ## Installing ML.NET in your project
 
-<iframe title="YouTube video player" class="youtube-player" type="text/html" width="640" height="385" src="https://www.youtube.com/embed/5qw4FFBwDCA?vq=hd1080" frameborder="0" allowFullScreen></iframe>
+![Step 2 - Installing ML.NET library](../../artwork/animations/step-2.gif)
 
 The ML.NET library is available as a nuget package. Execute the following command from the `GithubIssueClassifier` web project folder:
 
