@@ -162,7 +162,7 @@ Once the data is loaded, we can preprocess it for training a model.
 
 ## Preprocessing the data
 
-[![](http://img.youtube.com/vi/t47Sa7b77Dw/0.jpg)](http://www.youtube.com/watch?v=t47Sa7b77Dw "Preprocessing data")
+[![](http://img.youtube.com/vi/zky6yjnG3AQ/0.jpg)](http://www.youtube.com/watch?v=zky6yjnG3AQ "Create pipeline")
 
 The final step in this section of the tutorial is to preprocess the data
 so that we can train a model with it.
@@ -174,6 +174,7 @@ Open up the `Program.cs` file and add the following code to the end of the
 var pipeline = mlContext.Transforms.Conversion.MapValueToKey("Label", "Area")
     .Append(mlContext.Transforms.Text.FeaturizeText("TitleFeaturized", "Title"))
     .Append(mlContext.Transforms.Text.FeaturizeText("DescriptionFeaturized", "Description"))
+    .Append(mlContext.Transforms.Concatenate("Features", "TitleFeaturized", "DescriptionFeaturized"))
     .AppendCacheCheckpoint(mlContext);
 ```
 
@@ -182,7 +183,8 @@ This code does the following:
 1. Convert the area property to a key, so we can use it as the predicted output.
 2. Convert the title into a featurized column, splitting the text in separate words.
 3. Convert the description into a featurized column, splitting the text into separate words.
-4. Adding a caching checkpoint so training is a little faster.
+4. Convert the TitleFeatured + DescriptionFeaturized columns into a single column
+5. Adding a caching checkpoint so training is a little faster.
 
 Caching can reduce the time it takes to train the model. But, it doesn't work
 for larger datasets. So make sure that you're using this with caution. Leave it
