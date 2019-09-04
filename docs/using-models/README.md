@@ -15,7 +15,7 @@ In order to make a prediction we'll need a page in the web application that
 allows the user to enter some test data. Since this is no an ASP.NET tutorial
 we've gone ahead and prebuilt the page for you.
 
-Copy the contents from the [src](../src/start/Website) folder into the Website
+Copy the contents from the [src](../src/starter/Website) folder into the Website
 project and build the project to make sure that the code works as expected.
 
 ## Loading models from disk
