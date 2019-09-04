@@ -1,6 +1,6 @@
 # Testing models
-In the previous section we've looked at training models in ML.NET.
-In this section we'll expand the training pipeline with some testing logic.
+In the previous section, we've looked at training models in ML.NET. In this
+section, we'll expand the training pipeline with some testing logic.
 
 We'll cover the following topics:
 
@@ -13,12 +13,12 @@ Let's expand the pipeline with cross-validation logic to test the model.
 
 [![](http://img.youtube.com/vi/IamXQZQyWBg/0.jpg)](http://www.youtube.com/watch?v=IamXQZQyWBg "Validating the model")
 
-The data for this tutorial doesn't include a test set. We could introduce one
-by splitting the input file into a training and test set. But we're not going
+The data for this tutorial doesn't include a test set. We could introduce one by
+splitting the input file into a training and test set. However, we're not going
 to do that for now. Instead, we're going to explore using cross-validation.
 
-Open up `Program.cs` in the `Trainer` project and add the following code
-to the end of the `Main` method:
+Open up `Program.cs` in the `Trainer` project and add the following code to the
+end of the `Main` method:
 
 ``` csharp
 var results = mlContext.MulticlassClassification.CrossValidate(
@@ -49,8 +49,8 @@ better option.
 ## Using other methods for testing
 
 You can add other validation methods instead of cross-validation if you have the
-data for it. In this paragraph, we'll explore how to use regular validation
-methods. We're not adding them to the code, since we don't have the dataset for
+data for it. In this paragraph, we'll explore how to use other validation
+methods. We're not adding them to the code since we don't have the dataset for
 them.
 
 To validate a model using a test set, you can use the following code:
@@ -79,10 +79,10 @@ Using this method you can quickly evaluate how the model is doing.
 
 ## Summary
 
-In this section we've explored how to use cross-validation and regular
+In this section, we've explored how to use cross-validation and regular
 validation method to test your model.
 
-In the next section we'll look at how to use the model in a ASP.NET core web
+In the next section, we'll look at how to use the model in a ASP.NET core web
 application.
 
 [Next section](../using-models/README.md)

@@ -1,6 +1,6 @@
 # Using models
 
-In the previous section we've tested the model that we trained. In this section
+In the previous section, we've tested the model that we trained. In this section
 we'll take a look at how to use ML.NET models in ASP.NET Core.
 
 We'll cover the following topics:
@@ -9,11 +9,13 @@ We'll cover the following topics:
 * Building prediction logic
 * Making a prediction
 
+Let's get started.
+
 ## Preparing the solution
 
-In order to make a prediction we'll need a page in the web application that
-allows the user to enter some test data. Since this is no an ASP.NET tutorial
-we've gone ahead and prebuilt the page for you.
+To make a prediction, we'll need a page in the web application that allows the
+user to enter some test data. Since this is no an ASP.NET tutorial, we've gone
+ahead and prebuilt the page for you.
 
 Copy the contents from the [src](../../src/starter/Website) folder into the
 Website project. Make sure to build and run the project to make sure that the
@@ -31,10 +33,10 @@ the previous section.
 
 ## Building prediction logic
 
-Before we can make a prediction we need to load up the model. For this, we're
-going to implement a C# class that will serve as the wrapper around the model.
+Before we can make a prediction, we need to load up the model. For this, we're
+going to implement a C# class that serves as the wrapper around the model.
 
-We will build the wrapper in three steps:
+We're building the wrapper in three steps:
 
 1. First, we'll create the skeleton of the class
 2. Next, we'll load up the model
@@ -83,7 +85,7 @@ The code performs the following steps:
 When you've created the new `GithubIssueLabeler` class, let's write the code
 to load the actual model file.
 
-Copy the following lines to the constructor
+Copy the following lines to the constructor:
 
 ``` csharp
 _mlContext = new MLContext();
@@ -95,7 +97,7 @@ This code performs the following steps:
 
 1. First, it creates the ML.NET context.
 2. Next, it loads the model from disk.
-3. Finally, it creates a new prediction engine for the model
+3. Finally, it creates a new prediction engine for the model.
 
 Once we've got the logic to load the model, we can move on to the final step:
 Writing the method to make a prediction.
@@ -116,14 +118,15 @@ This code performs the following steps:
 
 1. First, we define a new method `Predict` that accepts an issue and returns a
    prediction.
-2. Next, we call the prediction engine with the issue that was passed in.
+2. Next, we call the prediction engine with the issue that was passed to the
+   method.
 3. Finally, we return the predicted label.
 
 That's all it takes to build the issue labeler. Now we can add it to the website
 as a service that we can call from the homepage of the website.
 
 For this we need to make the labeler available as a dependency in ASP.NET Core.
-Add the following code to the `ConfigureServices` method in `Startup.cs` of the 
+Add the following code to the `ConfigureServices` method in `Startup.cs` of the
 `Website` project:
 
 ``` csharp
@@ -141,17 +144,17 @@ This code performs the following steps:
 1. First, we add a new singleton service for the `GithubIssueLabeler` class with
    a lambda to specify how the runtime should construct an instance of this
    class.
-2. Next, in the the lambda, we ask for the hosting environment.
-3. After that, we get the web root path of the hosting environment and combine
-   it with the filename of the trained model.
+2. Next, in the lambda, we ask for the hosting environment.
+3. After that, we get the webroot path of the hosting environment and combine it
+   with the filename of the trained model.
 4. Finally, we feed the filename to the constructor of the `GithubIssueLabeler`
    and return the result to the caller.
 
-Now that we have the labeler registered in the application, let's build the
-code to make a prediction from the homepage.
+Now that we have the labeler registered in the application, let's build the code
+to predict the homepage.
 
 ## Making a prediction
-In this final step of the tutorial we're going to wire up the 
+In this final step of the tutorial, we're going to wire up the 
 `GithubIssueLabeler` to the page model of the homepage.
 
 Open up the `Index.cshtml.cs` file in the `Pages` folder of the `Website`
@@ -174,7 +177,7 @@ This code performs the following steps:
 2. Finally, we assign the GithubIssueLabeler instance to a private field.
 
 The next step is to wire up the prediction method of the labeler to the page.
-Add the following code to `OnPostAsync` method of the `IndexModel` class:
+Add the following code to the `OnPost` method of the `IndexModel` class:
 
 ``` csharp
 var issue = new GithubIssue
@@ -206,11 +209,11 @@ Open up your browser to `https://localhost:5001/` and try it out!
 
 ## Summary
 
-In this tutorial we've explored how to use ML.NET for a multi-class classification
-problem. You've learned how to load data, train a model, test it, and finally use it
-in your application.
+In this tutorial, we've explored how to use ML.NET for a multi-class
+classification problem. You've learned how to load data, train a model, test it,
+and finally use it in your application.
 
 Thank you for your time and hope you enjoyed it!
 
-Feel free to post an issue on this repository if you've find something wrong
-in the text. Otherwise, have a great day!
+Feel free to post an issue on this repository if you've found something wrong in
+the text. Otherwise, have a great day!
