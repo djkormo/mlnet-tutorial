@@ -9,11 +9,12 @@ the following topics:
 
 ## What we'll be working on during this tutorial
 
-This tutorial is focused primarily on learning how to use ML.NET in your project.
-We will work on a multi-class classifier for labeling Github issues.
+This tutorial is focused primarily on learning how to use ML.NET in your
+project. In this tutorial, we're working on a multi-class classifier for
+labeling Github issues.
 
-In this section of the tutorial we will start by creating a new ASP.NET Core
-web application and installing the ML.NET package. 
+In this section of the tutorial, we're creating a new ASP.NET Core web
+application and installing the ML.NET package.
 
 Let's start by creating an empty web project for the project.
 
@@ -21,7 +22,7 @@ Let's start by creating an empty web project for the project.
 
 [![](http://img.youtube.com/vi/NWQF11Fc9_s/0.jpg)](http://www.youtube.com/watch?v=NWQF11Fc9_s "Creating a new project")
 
-Start a new web project by executing the following commands
+Start a new web project by executing the following commands:
 
 * `mkdir github-issue-classifier`
 * `cd github-issue-classifier`
@@ -33,11 +34,11 @@ Start a new web project by executing the following commands
 * `dotnet sln add Model`
 * `dotnet sln add Trainer`
 
-This commands create a new project directory. Then, add a new solution file to the 
-project folder. Next, create a new empty web project. And finally, we're adding
+These commands create a new project directory. Then, add a new solution file to
+the project folder. Next, create a new empty web project. Finally, we're adding
 the project to the solution file.
 
-After you've executed these commands you can open the solution file in Visual
+After you've executed these commands, you can open the solution file in Visual
 Studio 2019 or execute `code .` from the project folder to open up Visual Studio
 Code.
 
@@ -54,8 +55,7 @@ just created.
 dotnet add package Microsoft.ML
 ```
 
-This adds a reference to the Microsoft.ML package.
-
+By executing this command you'll add a reference to the `Microsoft.ML` package.
 After adding the reference to the ML.NET package, let's finalize the project
 layout.
 
@@ -69,16 +69,16 @@ We now have a solution that has three projects:
 * Trainer - The console application that is going to train the model
 * Model - The components related to the model itself
 
-We haven't setup any references between the projects. We'll do that next.
+We haven't set up any references between the projects. We'll do that next.
 
-First, there's the model project that will contain the classes that define 
+First, there's the model project that contains the classes that define 
 the input, and output of the model and any other code that relates to the model.
 
-The website project will provide a user interface to use the model. It needs
-a reference to the model project in order to use it.
+The website project provides a user interface to use the model. It needs a
+reference to the model project to use it.
 
 Finally, we have a trainer project that is used to train the machine learning
-model. This also needs a reference to the model project.
+model. The trainer project also needs a reference to the model project.
 
 To set up the references, use the following commands:
 
@@ -91,9 +91,9 @@ And that's it, we're good to continue with the next step.
 
 ## Summary
 
-In this section we've created a new project for the Github issue classifier
-and added the ML.NET package to it. In the next section we'll load the dataset
-to prepare the model.
+In this section, we've created a new project for the Github issue classifier and
+added the ML.NET package to it. In the next section, we'll load the dataset to
+prepare the model.
 
 [Next section](../loading-data/README.md)
 

@@ -13,17 +13,18 @@ The following topics are covered in this tutorial:
 4. [Testing models](docs/testing-models/README.md)
 5. [Using models](docs/using-models/README.md)
 
-## Prerequisites
+## System Requirements
 
-You'll need a laptop running Mac, Windows or Linux with .NET Core 2.2 installed.
-You can get the .NET Core SDK here: https://dotnet.microsoft.com/
+You'll need a laptop running Mac, Windows, or Linux with .NET Core 2.2
+installed. You can get the .NET Core SDK here: https://dotnet.microsoft.com/
 
 In addition to this, please make sure you have either 
 [Visual Studio 2019](https://visualstudio.microsoft.com/)
 or [VSCode](https://code.visualstudio.com) installed.
 
 ## Getting started
-Please clone this repository to disk for the best experience during the tutorial.
+Please clone this repository to disk for the best experience during the
+tutorial. It includes the solution files as well as some starter files.
 
 ```
 git clone https://github.com/wmeints/mlnet-tutorial.git
