@@ -22,7 +22,7 @@ namespace Website.Pages
         public InputForm Input { get; set; }
         public string PredictedArea { get; set; }
 
-        public async Task<IActionResult> OnPostAsync()
+        public IActionResult OnPost()
         {
             //TODO: Enter your code here.
             return Page();
