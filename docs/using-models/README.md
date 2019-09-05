@@ -60,7 +60,7 @@ namespace GithubIssueClassifier.Model
         private readonly ITransformer _trainedModel;
         private readonly PredictionEngine<GithubIssue, GithubIssuePrediction> _predictionEngine;
 
-        public IssueLabeler(string modelFile)
+        public GithubIssueLabeler(string modelFile)
         {
             _mlContext = new MLContext();
 
