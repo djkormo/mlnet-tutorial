@@ -35,4 +35,4 @@ git clone https://github.com/wmeints/mlnet-tutorial.git
 ```
 
 After cloning the repository, start with the 
-[Getting started](getting-started/README.md) section.
+[Getting started](docs/getting-started/README.md) section.
