@@ -15,6 +15,8 @@ The following topics are covered in this tutorial:
 4. [Testing models](docs/testing-models/README.md)
 5. [Using models](docs/using-models/README.md)
 
+[Bonus section: Automated ML](https://youtu.be/6udPLZR0vvQ)
+
 ## System Requirements
 
 You'll need a laptop running Mac, Windows, or Linux with .NET Core 2.2
