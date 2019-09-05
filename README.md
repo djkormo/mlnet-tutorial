@@ -3,6 +3,8 @@
 This repository contains a series of tutorials that will teach you how to 
 use ML.NET in your .NET core applications.
 
+[Download the slides](./slides.pptx)
+
 ## Topics
 
 The following topics are covered in this tutorial: 
