@@ -22,7 +22,8 @@ Let's start by creating an empty web project for the project.
 
 [![](http://img.youtube.com/vi/NWQF11Fc9_s/0.jpg)](http://www.youtube.com/watch?v=NWQF11Fc9_s "Creating a new project")
 
-Start a new web project by executing the following commands:
+Open a terminal (Powershell on Windows, Mac Terminal or your Linux terminal) and execute 
+the following commands to create a new project:
 
 * `mkdir github-issue-classifier`
 * `cd github-issue-classifier`
@@ -34,13 +35,19 @@ Start a new web project by executing the following commands:
 * `dotnet sln add Model`
 * `dotnet sln add Trainer`
 
-These commands create a new project directory. Then, add a new solution file to
-the project folder. Next, create a new empty web project. Finally, we're adding
-the project to the solution file.
+These commands perform the following steps:
+
+1. First, we create a new project directory. 
+2. Then, we add a new solution file to the project folder. 
+3. Next, create a new empty web project. 
+4. Finally, we're adding the project to the solution file.
 
 After you've executed these commands, you can open the solution file in Visual
 Studio 2019 or execute `code .` from the project folder to open up Visual Studio
 Code.
+
+**Note**: You can also use the files from the [starter folder](../../src/starter/) to get started.
+In case you're using the starter files, skip over the rest of the steps in this section.
 
 Now that you have an empty web project, let's add the ML.NET package to it.
 
