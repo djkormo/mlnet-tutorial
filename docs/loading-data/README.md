@@ -39,8 +39,16 @@ columns are the features used by our model to make a prediction.
 
 [Download the dataset](https://github.com/wmeints/mlnet-tutorial/raw/master/data/corefx-issues-train.tsv)
 
-After downloading the dataset, place it in the `data` folder within the solution
-folder.
+After downloading the dataset, place it in the `Data` folder within the solution
+folder. You should now have a directory layout that looks like this:
+
+```
+github-issue-classifier
+├───Data
+├───Model
+├───Trainer
+└───Website
+```
 
 Next, we'll create a few classes that model the input and output of the model.
 
